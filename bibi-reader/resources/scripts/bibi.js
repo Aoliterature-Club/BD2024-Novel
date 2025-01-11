@@ -3867,31 +3867,31 @@
 						id: "bibi-subpanel_config"
 					}), e.Config);
 					delete n.create;
-					// n.bindOpener(e.R.addButtonGroup({
-					// 	Sticky: !0
-					// }).addButton({
-					// 	Type: "toggle",
-					// 	Labels: {
-					// 		default: {
-					// 			default: "Configure Setting",
-					// 			ja: "設定を変更"
-					// 		},
-					// 		active: {
-					// 			default: "Close Setting-Menu",
-					// 			ja: "設定メニューを閉じる"
-					// 		}
-					// 	},
-					// 	Help: !0,
-					// 	Icon: '<span class="bibi-icon bibi-icon-config"></span>'
-					// }));
-					// t.includes("ViewModeSection") ? n.ViewModeSection.create() : delete n.ViewModeSection, t.includes("NewWindowButton") || t.includes("FullscreenButton") ? n.WindowSection.create(t) : delete n.WindowSection, t.includes("WebsiteLink") || t.includes("BibiWebsiteLink") ? n.LinkageSection.create(t) : delete n.LinkageSection, W.dispatch("bibi:created-config")
+					n.bindOpener(e.R.addButtonGroup({
+						Sticky: !0
+					}).addButton({
+						Type: "toggle",
+						Labels: {
+							default: {
+								default: "Configure Setting",
+								ja: "設定を変更"
+							},
+							active: {
+								default: "Close Setting-Menu",
+								ja: "設定メニューを閉じる"
+							}
+						},
+						Help: !0,
+						Icon: '<span class="bibi-icon bibi-icon-config"></span>'
+					}));
+					t.includes("ViewModeSection") ? n.ViewModeSection.create() : delete n.ViewModeSection, t.includes("NewWindowButton") || t.includes("FullscreenButton") ? n.WindowSection.create(t) : delete n.WindowSection, t.includes("WebsiteLink") || t.includes("BibiWebsiteLink") ? n.LinkageSection.create(t) : delete n.LinkageSection, W.dispatch("bibi:created-config")
 				} else delete H.Menu.Config
 			}
 		}, H.Menu.Config.ViewModeSection = {
 			create: function() {
 				var e, t, n = H.Menu.Config,
 					i = (e = '<span class="bibi-shape bibi-shape-spread">'.concat((t = '<span class="bibi-shape bibi-shape-item"></span>') + t, "</span>")) + e + e//,
-					/*r = n.ViewModeSection = n.addSection({
+					r = n.ViewModeSection = n.addSection({
 						Labels: {
 							default: {
 								default: "View Mode",
@@ -3963,7 +3963,7 @@
 								}
 							}]
 						}]
-					})*/;
+					});
 				W.add("bibi:updated-settings", (function() {
 					r.ButtonGroups[0].Buttons.forEach((function(e) {
 						return H.setUIState(e, e.Mode == F.RVM ? "active" : "default")
